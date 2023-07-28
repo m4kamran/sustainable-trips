@@ -2,7 +2,12 @@
   "name": "@sustainable-path/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "ng": "nx",
+    "start": "npx nx run sustainable-path:serve:development",
+    "test": "nx affected --target=test",
+    "lint": "nx affected --target=lint"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~16.1.0",
