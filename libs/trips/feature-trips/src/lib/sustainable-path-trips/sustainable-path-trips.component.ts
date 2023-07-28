@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-namespace */
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {

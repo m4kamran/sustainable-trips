@@ -4,7 +4,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { Store, StoreModule } from '@ngrx/store';
 
 import { HttpClient } from '@angular/common/http';
-import { firstValueFrom } from 'rxjs';
+import { firstValueFrom, of } from 'rxjs';
 import { TripsActions } from './trips.actions';
 import { TripsEffects } from './trips.effects';
 import { TripsFacade } from './trips.facade';
@@ -25,7 +25,17 @@ describe('TripsFacade', () => {
           StoreModule.forFeature(tripsFeature),
           EffectsModule.forFeature([TripsEffects]),
         ],
-        providers: [TripsFacade],
+        providers: [
+          {
+            provide: HttpClient,
+            useValue: {
+              get: () => {
+                return of([]);
+              },
+            },
+          },
+          TripsFacade,
+        ],
       })
       class CustomFeatureModule {}
 

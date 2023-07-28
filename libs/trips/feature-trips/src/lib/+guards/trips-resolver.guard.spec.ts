@@ -1,11 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { CanActivateFn } from '@angular/router';
+import { tripsResolverGuard } from './trips-resolver.guard';
 
-import { repositoriesResolverGuard } from './repositories-resolver.guard';
-
-describe('repositoriesResolverGuard', () => {
-  const executeGuard: CanActivateFn = (...guardParameters) => 
-      TestBed.runInInjectionContext(() => repositoriesResolverGuard(...guardParameters));
+describe('tripsResolverGuard', () => {
+  const executeGuard: CanActivateFn = (...guardParameters) =>
+    TestBed.runInInjectionContext(() => tripsResolverGuard(...guardParameters));
 
   beforeEach(() => {
     TestBed.configureTestingModule({});

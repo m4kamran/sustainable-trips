@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { fetch } from '@nx/angular';
@@ -9,7 +8,6 @@ import { TripsFacade } from './trips.facade';
 @Injectable()
 export class TripsEffects {
   private actions$ = inject(Actions);
-  private http = inject(HttpClient);
   private tripsFacade = inject(TripsFacade);
 
   loadTrips$ = createEffect(() =>

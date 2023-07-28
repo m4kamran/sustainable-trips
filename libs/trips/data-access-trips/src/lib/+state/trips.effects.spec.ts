@@ -23,7 +23,7 @@ describe('TripsEffects', () => {
         {
           provide: TripsFacade,
           useValue: {
-            trips$: () => of([]),
+            getTrips$: () => of([]),
           },
         },
       ],

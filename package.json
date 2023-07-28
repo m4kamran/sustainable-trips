@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "nx",
-    "start": "npx nx run sustainable-path:serve:development",
+    "start": "nx run sustainable-path:serve:development",
     "test": "nx affected --target=test",
     "lint": "nx affected --target=lint"
   },
